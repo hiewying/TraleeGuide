@@ -1,0 +1,42 @@
+{%extends 'base.html.twig' %}
+
+{% block title %} Tralee Guide {% endblock %}
+
+{% block body %}
+    <img style="height: 350px; width: 49%; float: left; padding-bottom: 20px;" src="/image/tralee.jpg" alt="image">
+    <img style="height: 350px; width: 49%; float: right; padding-bottom: 20px;" src="/image/ireland.jpg" alt="image">
+
+    {% if activities %}
+        <table id="activities" class="table table-active">
+         <thead>
+          <tr>
+           <th>Activity Title</th>
+           <th>Actions</th>
+          </tr>
+         </thead>
+
+         <tbody>
+         {% for activity in activities %}
+            <tr>
+                <td> {{ activity.name }} </td>
+                <td> 
+                    <a href="/activity/{{ activity.id}}" class="btn btn-success">Show</a> 
+                    <a href="/activity/edit/{{ activity.id }}" class="btn btn-warning">Edit</a>
+                    <a href="#" class="btn btn-danger delete-article" data-id="{{ activity.id }}">Delete</a>
+                </td>
+            </tr>
+         {% endfor %}
+         </tbody>
+        </table>
+        
+    {% else %}
+        <p> No activities to display </p>
+    {% endif %}
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    <script src="/js/main.js"></script>
+{% endblock %}

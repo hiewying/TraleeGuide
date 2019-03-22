@@ -1,0 +1,16 @@
+{%extends 'base.html.twig' %}
+
+{% block title %} {{ activity.name }} {% endblock %}
+
+{% block body %}
+   
+   <h2>{{ activity.name }} </h2>
+   <p> Description: {{ activity.description }} </p>
+   <p> Location: {{ activity.location }} </p>
+   <p> Opening Hours: {{ activity.openingHours }} </p>
+
+   <hr>
+
+   <a href="/">Go Back</a>
+
+{% endblock %}
