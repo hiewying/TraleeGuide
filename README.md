@@ -1,4 +1,4 @@
-# traleeGuide
+# Tralee Guide
 
 
 TraleeGuide is a website that allows continuing/new students in I.T.Tralee to explore around Tralee, Co Kerry, Ireland. 
